@@ -9,7 +9,8 @@
       "@components/*": ["./src/components/*"],
       "@redux/*": ["./src/redux/*"],
       "@utils/*": ["./src/utils/*"],
-      "@api/*": ["./src/api/*"]
+      "@api/*": ["./src/api/*"],
+      "@common/*": ["./src/components/Common"]
     },
 
     /* Basic Options */

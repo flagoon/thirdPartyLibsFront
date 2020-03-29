@@ -13,6 +13,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
       'react-dom': '@hot-loader/react-dom',
+      '@common': path.resolve(__dirname, 'src/components/Common'),
     },
   },
   module: {

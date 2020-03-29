@@ -7,7 +7,7 @@ import { Menu } from './Header';
 const App = (): JSX.Element => {
   return (
     <MainContainer>
-      <header>
+      <header style={{ marginBottom: '1rem' }}>
         <nav>
           <Menu />
         </nav>

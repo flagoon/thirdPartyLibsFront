@@ -1,39 +1,25 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
+import styled from 'styled-components';
 
-interface Props {
-  age: number;
-  surname: string;
-}
+import { Menu } from './Header';
 
-class App extends React.Component<{}, Props> {
-  public state = {
-    age: 10,
-    surname: 'Pawel',
-  };
-
-  private increment = (): void => {
-    this.setState(
-      (state: Props): Pick<Props, 'age'> => ({ age: state.age + 1 }),
-    );
-  };
-
-  private decrement = (): void => {
-    this.setState(
-      (state: Props): Pick<Props, 'age'> => ({ age: state.age - 4 }),
-    );
-  };
-
-  public render(): JSX.Element {
-    const { age } = this.state;
-    return (
-      <div>
-        <h1>{age} - zero</h1>
-        <button onClick={this.increment}>+</button>
-        <button onClick={this.decrement}>-</button>
-      </div>
-    );
-  }
-}
+const App = (): JSX.Element => {
+  return (
+    <MainContainer>
+      <header>
+        <nav>
+          <Menu />
+        </nav>
+      </header>
+      <section>Main</section>
+      <footer>Footer</footer>
+    </MainContainer>
+  );
+};
 
 export default hot(App);
+
+export const MainContainer = styled.div`
+  margin: 1rem 3rem;
+`;

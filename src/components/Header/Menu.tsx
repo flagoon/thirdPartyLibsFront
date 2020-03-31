@@ -1,23 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Input } from '@common/';
+import PlusContainer from './PlusContainer.sc';
 
 const Menu = (): JSX.Element => {
   return (
     <MenuContainer>
-      <div
-        style={{
-          border: '1px solid red',
-          textAlign: 'center',
-          marginRight: '1rem',
-          fontSize: '2rem',
-          fontWeight: 'bold',
-        }}
-      >
-        +
-      </div>
+      <PlusContainer>+</PlusContainer>
 
-      <Input color="filter" />
+      <Input id="filter" name="filter" placeholder="filter..." />
     </MenuContainer>
   );
 };

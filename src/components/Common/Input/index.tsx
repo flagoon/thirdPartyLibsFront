@@ -1,14 +1,12 @@
-import React from 'react';
 import styled from 'styled-components';
 
-interface Props extends HTMLInputElement {
+interface Props {
   readonly color?: string;
 }
 
-const Input = (props: Props): JSX.Element => <StyledInput {...props} />;
-
-const StyledInput = styled.input<Props>`
+const StyledInput = styled.input`
   color: ${(props: Props): string => (props.color ? props.color : 'black')};
+  padding-left: 1rem;
 `;
 
-export default Input;
+export default StyledInput;

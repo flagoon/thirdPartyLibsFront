@@ -1,19 +1,25 @@
 import React from 'react';
+import Input from '@material-ui/core/Input';
+import Grid from '@material-ui/core/Grid';
+import AddCircleOutline from '@material-ui/icons/AddCircleOutline';
 import styled from 'styled-components';
-import { Input } from '@common/';
-import PlusContainer from './PlusContainer.sc';
 
-const Menu = (): JSX.Element => {
+interface Props {
+  onVisibilityChange: () => void;
+}
+
+const Menu = ({ onVisibilityChange }: Props): JSX.Element => {
   return (
-    <MenuContainer>
-      <PlusContainer>+</PlusContainer>
-
+    <Grid container item spacing={2} alignItems={'center'}>
+      <AddIcon onClick={onVisibilityChange} />
       <Input id="filter" name="filter" placeholder="filter..." />
-    </MenuContainer>
+    </Grid>
   );
 };
-export default Menu;
 
-const MenuContainer = styled.div`
-  display: flex;
+const AddIcon = styled(AddCircleOutline)`
+  margin-right: 0.5rem;
+  cursor: pointer;
 `;
+
+export default Menu;

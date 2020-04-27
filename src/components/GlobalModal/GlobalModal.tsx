@@ -26,26 +26,33 @@ const Modal = ({ onModalClose }: Props): JSX.Element => {
   };
 
   return (
-    <Backdrop maxWidth={'xl'} onClick={onBackdropClick}>
+    <Backdrop maxWidth="xl" onClick={onBackdropClick} data-testid="backdrop">
       <ModalContainer
         direction="column"
         container
         spacing={2}
         ref={backdropRef}
       >
-        <ContainerTitle item>
+        <ContainerTitle item data-testid="containerTitle">
           <div>Title</div>
         </ContainerTitle>
-        <ContainerBody item>
+        <ContainerBody item data-testid="containerBody">
           <h2>Content</h2>
         </ContainerBody>
-        <ContainerFooter container item justify="flex-end">
-          <Button component="label">
+        <ContainerFooter
+          container
+          item
+          justify="flex-end"
+          data-testid="containerFooter"
+        >
+          <Button component="label" data-testid="modalUploadButton">
             Upload File
             <input type="file" style={{ display: 'none' }} accept=".json" />
           </Button>
-          <Button>Add record</Button>
-          <Button onClick={onModalClose}>Cancel</Button>
+          <Button data-testid="modalAddRecordButton">Add record</Button>
+          <Button onClick={onModalClose} data-testid="modalCancelButton">
+            Cancel
+          </Button>
         </ContainerFooter>
       </ModalContainer>
     </Backdrop>

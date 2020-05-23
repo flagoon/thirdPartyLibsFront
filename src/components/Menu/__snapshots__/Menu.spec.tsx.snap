@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center"
+  >
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline"
+    >
+      <input
+        class="MuiInputBase-input MuiInput-input"
+        placeholder="filter..."
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

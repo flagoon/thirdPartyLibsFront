@@ -6,7 +6,9 @@ export type FilterType = string;
 
 export interface FilterContextInterface {
   changeFilterValue: (
-    e: ChangeEvent<HTMLInputElement> | MouseEvent<HTMLDivElement>,
+    e:
+      | ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+      | MouseEvent<HTMLLabelElement>,
   ) => void;
   filterValue: FilterType;
 }

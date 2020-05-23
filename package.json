@@ -9,7 +9,8 @@
     "build:hot": "yarn build:dev --hot",
     "build:dev": "rm -rf dist && webpack-dev-server --config webpack.config.dev.js",
     "test": "jest",
-    "format": "pretty-quick"
+    "format": "pretty-quick",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "keywords": [],
   "author": "",
@@ -67,7 +68,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn pretty-quick; yarn type-check",
+      "pre-commit": "yarn pretty-quick; yarn lint; yarn type-check",
       "pre-merge": "yarn test",
       "pre-push": "yarn test"
     }

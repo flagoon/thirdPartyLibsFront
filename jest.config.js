@@ -20,4 +20,12 @@ module.exports = {
 
   // Module file extensions for importing
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+
+  // required for handling aliases
+  moduleNameMapper: {
+    '^@providers(.*)$': '<rootDir>/src/providers$1',
+    '^@components(.*)$': '<rootDir>/src/components$1',
+    '^@api(.*)$': '<rootDir>/src/api$1',
+    '^@utils(.*)$': '<rootDir>/src/utils$1',
+  },
 };

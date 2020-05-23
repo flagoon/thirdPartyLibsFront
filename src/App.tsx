@@ -3,7 +3,7 @@ import React from 'react';
 import { StylesProvider } from '@material-ui/core';
 import { createGlobalStyle } from 'styled-components';
 import { AppContainer } from './App.styled';
-import FilterProvider from './Providers/Filter/FilterContextProvider';
+import FilterProvider from './providers/Filter/FilterContextProvider';
 import { Menu } from './components/Menu';
 import { ButtonContainers } from './components/ButtonContainers';
 import { LibraryTable } from './components/LibraryTable';

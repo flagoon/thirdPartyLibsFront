@@ -13,22 +13,15 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
       'react-dom': '@hot-loader/react-dom',
-      '@common': path.resolve(__dirname, 'src/components/Common'),
+      '@src/*': path.resolve(__dirname, 'src'),
+      '@providers/*': path.resolve(__dirname, 'src/providers'),
+      '@components/*': path.resolve(__dirname, 'src/components'),
+      '@utils/*': path.resolve(__dirname, 'src/utils'),
+      '@api/*': path.resolve(__dirname, 'src/api'),
     },
   },
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.(ts|tsx|js|jsx)?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'eslint-loader',
-          options: {
-            emitError: true,
-          },
-        },
-      },
       {
         test: /\.(js|jsx)?$/,
         exclude: /node_modules/,

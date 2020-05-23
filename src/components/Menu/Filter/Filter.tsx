@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Input, InputLabel } from '@material-ui/core';
-import FilterContext from '../../../Providers/Filter/FilterContext';
+import FilterContext from '@providers/Filter/FilterContext';
 import styled from 'styled-components';
 
 const Menu = (): JSX.Element => {
